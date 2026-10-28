@@ -33,8 +33,8 @@ setup(
     maintainer='Equipe de Robótica Hospitalar',
     maintainer_email='robotica@example.com',
     description=(
-        'Treinamento introdutório de ROS 2, Gazebo e Python com um '
-        'robô móvel em um hospital simulado.'
+        'O HemaBot é um projeto introdutório de ROS 2, Gazebo e Python '
+        'com um robô móvel em um hospital simulado.'
     ),
     license='Apache-2.0',
     entry_points={

@@ -1,6 +1,6 @@
-# Treinamento HemaBot — ROS 2 e Gazebo
+# HemaBot — ROS 2 e Gazebo
 
-O Treinamento HemaBot é um projeto introdutório de robótica móvel que orienta os
+O HemaBot é um projeto introdutório de robótica móvel que orienta os
 alunos desde a preparação do ambiente no WSL 2 até o controle de um robô
 diferencial em um hospital simulado. Com ROS 2, Gazebo e Python, os participantes
 exploram nós e tópicos, enviam comandos de movimento e programam uma missão de
