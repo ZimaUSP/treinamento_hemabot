@@ -1,6 +1,6 @@
 # HemaBot — ROS 2 e Gazebo
 
-Reconhecido como O MELHOR PROJETO DA ZIMA, o HemaBot é um robô desenvolvido no contexto da pandemia como uma forma de transportar amostras e exames laboratoriais de forma segura e automatizada dentro de ambientes hospitalares, evitando a exposição de profissionais a áreas contaminadas. Seu projeto passou por diversas versões de estrutura e aprimoramentos técnicos, incluindo a criação de um modelo alternativo compacto e eficiente chamado MiniHema, voltado para testes e validações rápidas.
+Reconhecido como *O MELHOR PROJETO DA ZIMA*, o HemaBot é um robô desenvolvido no contexto da pandemia como uma forma de transportar amostras e exames laboratoriais de forma segura e automatizada dentro de ambientes hospitalares, evitando a exposição de profissionais a áreas contaminadas. Seu projeto passou por diversas versões de estrutura e aprimoramentos técnicos, incluindo a criação de um modelo alternativo compacto e eficiente chamado MiniHema, voltado para testes e validações rápidas.
 Na área da computação, as tarefas se baseiam no estudo e na execução algoritmos e métodos de controle de trajetória. Outra responsabilidade é a configuração de componentes responsáveis pela navegação e percepção de obstáculos, em colaboração com os integrantes da eletrõnica. 
 
 
