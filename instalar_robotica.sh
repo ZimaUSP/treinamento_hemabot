@@ -24,10 +24,13 @@ export LANG=en_US.UTF-8
 sudo add-apt-repository -y universe
 sudo apt update
 
-ros_apt_source_version="$({
-  curl -fsSL \
-    https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest
-} | awk -F\" '/tag_name/ {print $4; exit}')"
+ros_apt_source_metadata="/tmp/ros-apt-source-release.json"
+curl -fsSL -o "$ros_apt_source_metadata" \
+  https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest
+
+ros_apt_source_version="$(
+  awk -F\" '/"tag_name":/ {print $4}' "$ros_apt_source_metadata"
+)"
 
 if [[ -z "$ros_apt_source_version" ]]; then
   echo 'Não foi possível descobrir a versão de ros2-apt-source.' >&2
