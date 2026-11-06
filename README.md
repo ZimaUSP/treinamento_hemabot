@@ -15,6 +15,24 @@ Na área da computação, as tarefas se baseiam no estudo e na execução algori
 O nome deste repositório é `treinamento_hemabot`. O pacote ROS 2 interno chama-se
 `hospital_robot`, preservando os comandos usados nos guias da atividade.
 
+## Primeiros passos da Molécula
+
+Neste material, **Molécula** é o aluno que realizará a atividade. Antes de
+começar, a Molécula deve preparar o WSL 2 com Ubuntu 24.04 seguindo o
+[guia de instalação](docs/GUIA_INSTALACAO.md). Depois, no terminal do Ubuntu,
+instale o Git e clone este repositório na pasta pessoal:
+
+```bash
+sudo apt update
+sudo apt install -y git
+cd ~
+git clone https://github.com/ZimaUSP/treinamento_hemabot.git
+cd treinamento_hemabot
+```
+
+Todos os comandos seguintes devem ser executados dentro dessa pasta, salvo
+quando o roteiro indicar outro local.
+
 ## Conteúdo
 
 ```text
@@ -34,7 +52,7 @@ treinamento_hemabot/
 
 ## Início rápido
 
-No terminal do Ubuntu 24.04:
+Depois de clonar o repositório, no terminal do Ubuntu 24.04:
 
 ```bash
 cd ~/treinamento_hemabot

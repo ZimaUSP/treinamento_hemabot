@@ -11,7 +11,7 @@ Este guia prepara o Windows para executar a atividade no Ubuntu pelo WSL 2.
 - acesso de administrador no Windows;
 - conexão com a internet;
 - pelo menos 8 GB de memória RAM recomendados;
-- arquivo ou clone do repositório `treinamento_hemabot`.
+- conta de usuário criada no Ubuntu.
 
 ## 2. Instalar WSL 2 e Ubuntu 24.04
 
@@ -37,12 +37,17 @@ A coluna `VERSION` deve mostrar `2`. Se mostrar `1`:
 wsl --set-version Ubuntu-24.04 2
 ```
 
-## 3. Colocar o repositório no Ubuntu
+## 3. Orientação inicial para a Molécula
 
-Copie a pasta para a pasta pessoal do Ubuntu. No terminal, o caminho esperado é
-`~/treinamento_hemabot`.
+Neste material, **Molécula** é o aluno que realizará a atividade. Como primeiro
+passo dentro do Ubuntu, instale o Git. Em seguida, clone o repositório do HemaBot
+diretamente na pasta pessoal do Linux:
 
 ```bash
+sudo apt update
+sudo apt install -y git
+cd ~
+git clone https://github.com/ZimaUSP/treinamento_hemabot.git
 cd ~/treinamento_hemabot
 ls
 ```
@@ -50,6 +55,14 @@ ls
 A listagem deve incluir `README.md`, `instalar_robotica.sh`, `scripts` e `src`.
 Evite compilar em `/mnt/c`: o sistema de arquivos do Ubuntu costuma ser mais
 rápido e evita problemas de permissões e links simbólicos.
+
+Se a pasta `~/treinamento_hemabot` já existir, não execute o clone novamente.
+Entre na pasta e atualize o conteúdo com:
+
+```bash
+cd ~/treinamento_hemabot
+git pull
+```
 
 ## 4. Instalar ROS 2, Gazebo e ferramentas
 

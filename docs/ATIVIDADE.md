@@ -6,6 +6,12 @@ diferencial em um hospital simulado. Com ROS 2, Gazebo e Python, os participante
 exploram nós e tópicos, enviam comandos de movimento e programam uma missão de
 entrega, observando na simulação os efeitos do código sobre o robô.
 
+## Antes de começar
+
+A Molécula deve primeiro concluir o [guia de instalação](GUIA_INSTALACAO.md),
+clonar o repositório e confirmar que ele está disponível em
+`~/treinamento_hemabot`. Depois disso, pode iniciar os passos da atividade.
+
 ## Objetivo
 
 Conhecer a comunicação do ROS 2, iniciar uma simulação no Gazebo, movimentar um
