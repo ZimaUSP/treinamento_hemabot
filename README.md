@@ -1,4 +1,4 @@
-# HemaBot — ROS 2 e Gazebo
+# Treinamento - Hemabot
 
 Reconhecido como *O MELHOR PROJETO DA ZIMA*, o HemaBot é um robô desenvolvido no contexto da pandemia como uma forma de transportar amostras e exames laboratoriais de forma segura e automatizada dentro de ambientes hospitalares, evitando a exposição de profissionais a áreas contaminadas. Seu projeto passou por diversas versões de estrutura e aprimoramentos técnicos, incluindo a criação de um modelo alternativo compacto e eficiente chamado MiniHema, voltado para testes e validações rápidas.
 Na área da computação, as tarefas se baseiam no estudo e na execução algoritmos e métodos de controle de trajetória. Outra responsabilidade é a configuração de componentes responsáveis pela navegação e percepção de obstáculos, em colaboração com os integrantes da eletrõnica. 
@@ -10,17 +10,23 @@ Na área da computação, as tarefas se baseiam no estudo e na execução algori
 - WSL 2 com Ubuntu 24.04 LTS;
 - ROS 2 Jazzy Jalisco;
 - Gazebo Harmonic;
-- integração `ros_gz`.
+- integração `ros_gz`;
+- Visual Studio Code instalado no Windows;
+- extensão **WSL**, da Microsoft, instalada no Visual Studio Code;
+- extensão **Python**, da Microsoft, recomendada.
 
 O nome deste repositório é `treinamento_hemabot`. O pacote ROS 2 interno chama-se
 `hospital_robot`, preservando os comandos usados nos guias da atividade.
 
 ## Primeiros passos da Molécula
 
-Neste material, **Molécula** é o aluno que realizará a atividade. Antes de
-começar, a Molécula deve preparar o WSL 2 com Ubuntu 24.04 seguindo o
-[guia de instalação](docs/GUIA_INSTALACAO.md). Depois, no terminal do Ubuntu,
-instale o Git e clone este repositório na pasta pessoal:
+Antes de começar, a Molécula deve preparar o WSL 2 com Ubuntu 24.04 seguindo o
+[guia de instalação](docs/GUIA_INSTALACAO.md). Instale o Visual Studio Code no
+Windows e adicione a extensão **WSL**, da Microsoft. A extensão **Python** também
+é recomendada para facilitar a edição do exercício.
+
+Depois, no terminal do Ubuntu, instale o Git e clone este repositório na pasta
+pessoal:
 
 ```bash
 sudo apt update
@@ -30,8 +36,17 @@ git clone https://github.com/ZimaUSP/treinamento_hemabot.git
 cd treinamento_hemabot
 ```
 
-Todos os comandos seguintes devem ser executados dentro dessa pasta, salvo
-quando o roteiro indicar outro local.
+Abra o projeto no Visual Studio Code conectado ao Ubuntu:
+
+```bash
+code .
+```
+
+Na primeira execução, o VS Code instalará seu componente de integração no WSL.
+Confirme que o canto inferior esquerdo da janela mostra
+`WSL: Ubuntu-24.04`. Todos os comandos seguintes devem ser executados no
+terminal integrado do VS Code, aberto pelo menu **Terminal > Novo Terminal**,
+salvo quando o roteiro indicar outro local.
 
 ## Conteúdo
 
@@ -52,7 +67,7 @@ treinamento_hemabot/
 
 ## Início rápido
 
-Depois de clonar o repositório, no terminal do Ubuntu 24.04:
+Depois de abrir o repositório no VS Code, use o terminal integrado:
 
 ```bash
 cd ~/treinamento_hemabot
@@ -87,16 +102,22 @@ ros2 run hospital_robot entrega_programada \
   --ros-args -p use_sim_time:=true
 ```
 
-## Atividade do aluno
+## Atividade do molécula
 
 O exercício de Python está em
-`src/hospital_robot/student_templates/delivery_l.py`. O aluno copia esse modelo
-para o pacote, completa os trechos `TODO`, recompila e executa a missão:
+`src/hospital_robot/student_templates/delivery_l.py`. A Molécula copia esse
+modelo para o pacote pelo terminal integrado:
 
 ```bash
 cp src/hospital_robot/student_templates/delivery_l.py \
   src/hospital_robot/hospital_robot/delivery_l.py
-nano src/hospital_robot/hospital_robot/delivery_l.py
+```
+
+No explorador de arquivos do VS Code, abra
+`src/hospital_robot/hospital_robot/delivery_l.py`, complete os trechos `TODO` e
+salve com `Ctrl+S`. Depois, volte ao terminal integrado, recompile e execute:
+
+```bash
 bash scripts/compilar_workspace.sh
 source install/setup.bash
 ros2 run hospital_robot delivery_l \
