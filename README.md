@@ -102,7 +102,13 @@ ros2 run hospital_robot entrega_programada \
   --ros-args -p use_sim_time:=true
 ```
 
-## Atividade do molécula
+## Parte prática — roteiro da atividade
+
+Depois de concluir a instalação e verificar o ambiente, a Molécula deve usar o
+[Roteiro da atividade](docs/ATIVIDADE.md) como documento principal da parte
+prática. O roteiro apresenta a sequência de comandos ROS 2, a simulação no
+Gazebo, a movimentação do HemaBot e o exercício em Python. As instruções abaixo
+são apenas um resumo dessa etapa.
 
 O exercício de Python está em
 `src/hospital_robot/student_templates/delivery_l.py`. A Molécula copia esse
@@ -132,8 +138,9 @@ git restore src/hospital_robot/hospital_robot/delivery_l.py
 
 ## Documentação
 
-- [Guia de instalação](docs/GUIA_INSTALACAO.md)
-- [Roteiro da atividade](docs/ATIVIDADE.md)
+- [Guia de instalação](docs/GUIA_INSTALACAO.md): usado para preparar o ambiente.
+- [Roteiro da atividade](docs/ATIVIDADE.md): deve ser seguido durante a parte
+  prática.
 - `docs/Guia_Instalacao_ROS2_Gazebo.docx`
 - `docs/Atividade_Introducao_ROS2_Gazebo.docx`
 
