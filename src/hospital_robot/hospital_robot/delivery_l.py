@@ -21,6 +21,7 @@ class MissionState(Enum):
 class DeliveryL(Node):
     """Executa uma sequência aberta: reta, curva, reta e entrega."""
 
+    # TODO 1: escolha as velocidades da missão.
     LINEAR_SPEED = 0.20
     ANGULAR_SPEED = 0.50
 
@@ -61,6 +62,7 @@ class DeliveryL(Node):
                 self.change_state(MissionState.FIRST_STRAIGHT)
 
         elif self.state == MissionState.FIRST_STRAIGHT:
+            # TODO 2: comande a primeira reta.
             command.linear.x = self.LINEAR_SPEED
             if elapsed >= self.FIRST_STRAIGHT_TIME:
                 command.linear.x = 0.0
@@ -71,12 +73,14 @@ class DeliveryL(Node):
                 self.change_state(MissionState.TURNING)
 
         elif self.state == MissionState.TURNING:
+            # TODO 3: comande uma curva de 90 graus para a esquerda.
             command.angular.z = self.ANGULAR_SPEED
             if elapsed >= self.TURN_TIME:
                 command.angular.z = 0.0
                 self.change_state(MissionState.SECOND_STRAIGHT)
 
         elif self.state == MissionState.SECOND_STRAIGHT:
+            # TODO 4: comande a segunda reta.
             command.linear.x = self.LINEAR_SPEED
             if elapsed >= self.SECOND_STRAIGHT_TIME:
                 command.linear.x = 0.0
