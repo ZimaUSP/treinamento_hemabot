@@ -51,12 +51,12 @@
           <material><ambient>0.88 0.92 0.95 1</ambient><diffuse>0.88 0.92 0.95 1</diffuse></material>
         </visual>
         <collision name="north_horizontal_wall">
-          <pose>-1.45 -0.9 0.30 0 0 0</pose>
-          <geometry><box><size>3.3 0.10 0.60</size></box></geometry>
+          <pose>-1.85 -0.9 0.30 0 0 0</pose>
+          <geometry><box><size>2.5 0.10 0.60</size></box></geometry>
         </collision>
         <visual name="north_horizontal_wall_visual">
-          <pose>-1.45 -0.9 0.30 0 0 0</pose>
-          <geometry><box><size>3.3 0.10 0.60</size></box></geometry>
+          <pose>-1.85 -0.9 0.30 0 0 0</pose>
+          <geometry><box><size>2.5 0.10 0.60</size></box></geometry>
           <material><ambient>0.88 0.92 0.95 1</ambient><diffuse>0.88 0.92 0.95 1</diffuse></material>
         </visual>
         <collision name="west_vertical_wall">

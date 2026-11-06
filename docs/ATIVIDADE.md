@@ -108,7 +108,8 @@ Compile e execute com a simulação aberta:
 ```bash
 bash scripts/compilar_workspace.sh
 source install/setup.bash
-ros2 run hospital_robot delivery_l
+ros2 run hospital_robot delivery_l \
+  --ros-args -p use_sim_time:=true
 ```
 
 Ajuste uma velocidade ou um tempo, compile novamente e compare o trajeto. O

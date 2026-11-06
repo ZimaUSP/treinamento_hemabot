@@ -83,7 +83,8 @@ ros2 topic echo /odom
 Para iniciar a solução de demonstração:
 
 ```bash
-ros2 run hospital_robot entrega_programada
+ros2 run hospital_robot entrega_programada \
+  --ros-args -p use_sim_time:=true
 ```
 
 ## Atividade do aluno
@@ -98,7 +99,8 @@ cp src/hospital_robot/student_templates/delivery_l.py \
 nano src/hospital_robot/hospital_robot/delivery_l.py
 bash scripts/compilar_workspace.sh
 source install/setup.bash
-ros2 run hospital_robot delivery_l
+ros2 run hospital_robot delivery_l \
+  --ros-args -p use_sim_time:=true
 ```
 
 Como o repositório usa Git, a solução original pode ser restaurada com:

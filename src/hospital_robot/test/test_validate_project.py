@@ -85,6 +85,9 @@ def test_model_contains_required_systems():
     model = (PACKAGE_ROOT / 'models/hospital_robot/model.sdf').read_text()
     assert 'left_wheel_joint' in model
     assert 'right_wheel_joint' in model
+    assert '<joint name="left_wheel_joint" type="revolute">' in model
+    assert '<joint name="right_wheel_joint" type="revolute">' in model
+    assert 'type="continuous"' not in model
     assert 'DiffDrive' in model
     assert '<topic>/cmd_vel</topic>' in model
     assert '<topic>/scan</topic>' in model
@@ -96,6 +99,22 @@ def test_launch_bridges_required_topics():
     launch = (PACKAGE_ROOT / 'launch/atividade.launch.py').read_text()
     for topic in ('/cmd_vel', '/scan', '/odom', '/clock'):
         assert topic in launch
+
+
+def test_l_corridor_corner_is_open():
+    for world_name in ('hospital_l.sdf', 'hospital_l_challenge.sdf'):
+        root = ET.parse(PACKAGE_ROOT / 'worlds' / world_name).getroot()
+        wall = root.find(
+            ".//model[@name='corridor_walls']/link/"
+            "collision[@name='north_horizontal_wall']"
+        )
+        assert wall is not None
+
+        pose_x = float(wall.findtext('pose').split()[0])
+        size_x = float(wall.findtext('geometry/box/size').split()[0])
+        right_edge = pose_x + size_x / 2
+
+        assert right_edge <= -0.6
 
 
 def test_no_fortress_identifiers_remain():
